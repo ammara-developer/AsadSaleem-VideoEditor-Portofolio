@@ -1,0 +1,128 @@
+.video-section {
+  position: relative;
+  width: 100%;
+  /* min-height ensures it grows if content is large, 100dvh prevents mobile browser bar issues */
+  min-height: 100dvh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  .bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .video-overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    /* Use min-height instead of height: 100% to avoid cutting off text */
+    min-height: 100dvh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 2rem 1rem;
+    background: rgba(0, 0, 0, 0.4); 
+
+    h1 {
+      /* This makes the font fluid: it shrinks on mobile and grows on desktop automatically */
+      font-size: clamp(2rem, 8vw, 5rem); 
+      margin-bottom: 0.5rem;
+      font-family: 'Orbitron', sans-serif;
+      line-height: 1.2;
+      width: 100%;
+      max-width: 90vw; 
+    }
+
+    p {
+      font-family: "Permanent Marker", cursive; 
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    /* Target your custom components to ensure they have spacing */
+    app-navbar {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    app-button {
+      margin-top: 1rem;
+    }
+  }
+}
+/* From Uiverse.io by Gaurang7717 */ 
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: #00d757;
+}
+
+.sign {
+  width: 100%;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 25px;
+}
+
+.sign svg path {
+  fill: white;
+}
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover {
+  width: 150px;
+  border-radius: 40px;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 10px;
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: 0.3s;
+  padding-right: 10px;
+}
+.Btn:active {
+  transform: translate(2px, 2px);
+}

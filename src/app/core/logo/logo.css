@@ -1,0 +1,45 @@
+/* Root link */
+.logo-root {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Main layout */
+.logo-container {
+  display: flex;
+  align-items: flex-start; /* IMPORTANT */
+  gap: 8px;
+}
+
+/* Icon */
+.logo-icon {
+  width: 34px;
+  height: 34px;
+  margin-top: 2px; /* aligns icon with VES text */
+}
+
+/* Text block */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+/* VES text */
+.logo-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Subtitle */
+.logo-subtitle {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #ccc;
+  margin-top: 3px;
+  font-family: 'Inter', sans-serif;
+}

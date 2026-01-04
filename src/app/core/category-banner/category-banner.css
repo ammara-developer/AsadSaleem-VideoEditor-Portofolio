@@ -1,0 +1,31 @@
+.category-banner {
+  /* Use the gradient variable from your style.css */
+  background: var(--main-gradient, linear-gradient(to bottom, #360033, #0b8793));
+  
+  width: 100%;
+  height: 50vh; /* Fixed height as requested */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+
+.banner-content h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: black; /* Black text as requested */
+  margin: 0;
+  padding: 0 15px;
+  text-align: center;
+  font-size: 4.5rem; /* Default size */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Responsiveness: Adjust font size for small phones */
+@media (max-width: 480px) {
+  .banner-content h1 {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+}

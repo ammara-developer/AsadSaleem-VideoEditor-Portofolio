@@ -1,0 +1,82 @@
+.category-nav {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.button-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allows buttons to wrap to next line on mobile */
+  gap: 60px;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+.category-btn {
+  width: 350px; /* Slightly wider to fit your text */
+  height: 80px;
+  /* Updated to use your main gradient */
+  background: var(--main-gradient);
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+    font-family: sans-serif;
+    margin-top: 30px;
+}
+
+.category-btn span {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: top 0.5s;
+  pointer-events: none; /* Ensures click goes to button */
+}
+
+.btn-text-one {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-weight: 600;
+}
+
+.btn-text-two {
+  position: absolute;
+  width: 100%;
+  top: 150%;
+  left: 0;
+  transform: translateY(-50%);
+  font-weight: 900;
+}
+
+/* Hover Effects */
+.category-btn:hover .btn-text-one {
+  top: -100%;
+}
+
+.category-btn:hover .btn-text-two {
+  top: 50%;
+}
+
+/* Active State (Shows which page you are on) */
+.active-btn {
+  border: 2px solid white;
+  box-shadow: 0 0 15px rgba(11, 135, 147, 0.8);
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 600px) {
+  .category-btn {
+    width: 140px;
+    height: 45px;
+  }
+  .category-btn span {
+    font-size: 9px;
+  }
+}
